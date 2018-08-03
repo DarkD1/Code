@@ -25,15 +25,17 @@ public:
     void show(){
         cout << "Real part : " << real << endl << "Imaginary part : " << imag << endl;
     }
+    void add(complex_n a, complex_n b){
+        real = a.real + b.real;
+        imag = a.imag + b.imag;
+        cout << "Result is : ";
+        imag >=0? cout << real <<  " + " << imag << "i": cout << real << " " << imag << "i";
+        cout << endl;
+    }
 };
 
 int main(){
-    complex_n x, y(5.0f), z(7.5f, -454.14f);
-    x.show(); // no argument passed while declaring
-    y.show(); // one argument passed while declaring
-    z.show(); // two argument passed while declaring
+    complex_n x, y(5.0f), z(7.5f, 9.14f), res;
+    res.add(y, z);
     return 0;
 }
-
-
-
