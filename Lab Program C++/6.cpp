@@ -16,8 +16,10 @@ public:
     void addtime(TIME y){
         int s = (seconds + y.seconds) % 60;
         int m = ((seconds + y.seconds) / 60) + (minutes + y.minutes) % 60;
-        int h = ((minutes + y.minutes) / 60) + hours + y.hours;
-        cout << h << " hour " << m << " minute " << s << " second"<< endl;
+        int addition_m = m / 60;
+        m %= 60;
+        int h = ((minutes + y.minutes) / 60) + hours + y.hours + addition_m;
+        cout << h << " hours " << m << " minutes " << s << " seconds"<< endl;
     }
 };
 
