@@ -1,7 +1,7 @@
 /*
     Create two classes DM and DB which store the value of distances: DM in meter, centimeter and DB in feet, inches.
     -Write a program that can read values for the class objects.
-    -Add one object of DM with another object of DM using friend function.
+    -Add one object of DM with another object of DB using friend function.
     -Display all the objects in appropriate units.
 */
 #include <bits/stdc++.h>
