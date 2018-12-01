@@ -2,12 +2,14 @@
 #include <cstdlib>
 
 using namespace std;
+// merging two arrays
 void _merge(int *left, int *right, int *a, int nL, int nR){
     int k = 0, i = 0, j = 0;
     while(i < nL && j < nR) (left[i] <= right[j])?  a[k++] = left[i++] : a[k++] = right[j++];
     while(i < nL) a[k++] = left[i++];
     while(j < nR) a[k++] = right[j++];
 }
+// merge sort
 void mergesort(int *a, int n){
     if(n < 2) return;
     int mid = n / 2;
@@ -24,6 +26,7 @@ int main(){
     cin >> n;
     int arr[n];
     for(int i = 0; i < n; i++) cin >> arr[i];
+    // merge sort starts from here
     mergesort(arr, n);
     for(int i = 0; i < n; i++) cout << arr[i] << " ";
     return 0;
