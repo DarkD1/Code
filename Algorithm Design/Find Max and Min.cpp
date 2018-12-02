@@ -10,7 +10,6 @@ void fMaxMin(int *a, int i, int j, int &mx ,int &mn){
     else {
         fMaxMin(a, i, (i+j)/2, mx, mn);
         fMaxMin(a,((i+j)/2) + 1, j, mx1, mn1);
-        cout << mx << " " << mn << " " << mx1 << " " << mn1 << endl;
         mx1 > mx? mx = mx1 : mx = mx;
         mn1 < mn? mn = mn1 : mn = mn;
     }
