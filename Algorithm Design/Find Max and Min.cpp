@@ -2,16 +2,17 @@
 
 using namespace std;
 int mx, mn, mx1, mn1;
-void fMaxMin(int *a, int i, int j, int &mx ,int &mn){
-    if(i == j) mx = mn = a[i];
+void fMaxMin(int *a, int i, int j, int &m ,int &n){
+    if(i == j) m = n = a[i];
     else if(i == j - 1){
-        a[i] > a[j]? mx = a[i], mn = a[j] : mn = a[i], mx = a[j];
+        if(a[i] > a[j]) m = a[i], n = a[j];
+        else n = a[i], m = a[j];
     }
     else {
         fMaxMin(a, i, (i+j)/2, mx, mn);
         fMaxMin(a,((i+j)/2) + 1, j, mx1, mn1);
-        mx1 > mx? mx = mx1 : mx = mx;
-        mn1 < mn? mn = mn1 : mn = mn;
+        mx = mx1 > mx? mx1 : mx;
+        mn = mn1 < mn? mn1 : mn;
     }
 }
 int main(){
