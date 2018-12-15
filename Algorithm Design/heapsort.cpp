@@ -10,8 +10,13 @@ void heapify(int *arr, int n, int i){
         heapify(arr, n, largest);
     }
 }
+void buildheap(int *arr, int n){
+    for(int i = n / 2 - 1; i >= 0; i--){
+        heapify(arr, n, i);
+    }
+}
 void heapsort(int *arr, int n){
-    for(int i = n / 2 - 1; i >= 0; i--) heapify(arr, n, i);
+    buildheap(arr, n);
     for(int heapsize = n - 1; heapsize >= 0; heapsize--){
         swap(arr[0], arr[heapsize]);
         heapify(arr, heapsize, 0);
@@ -28,4 +33,3 @@ int main(){
     for(int i = 0; i < n; i++) cout << arr[i] << " ";
     return 0;
 }
-
