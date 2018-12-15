@@ -11,7 +11,11 @@ void heapify(int *arr, int n, int i){
         heapify(arr, n, largest);
     }
 }
-
+void buildheap(int *arr, int n){
+    for(int i = n / 2 - 1; i >= 0; i--){
+        heapify(arr, n, i);
+    }
+}
 int main(){
     int n;
     cout << "Array size: ";
@@ -19,10 +23,7 @@ int main(){
     int arr[n];
     cout << "Array elements: ";
     for(int i = 0; i < n; i++) cin >> arr[i];
-
-    for(int i = n / 2 - 1; i >= 0; i--){
-        heapify(arr, n, i);
-    }
+    buildheap(arr, n);
     for(int i = 0; i < n; i++) cout << arr[i] << " ";
     return 0;
 }
