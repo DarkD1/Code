@@ -1,5 +1,5 @@
 # COLLECTION OF MY CODE
-# Algorithm Design
+<h1><a href="https://github.com/sazzadshopno/Code/tree/master/Algorithm%20Design">Algorithm Design</a></h1>
 In this folder there are many algorithm's written in programming language C++. These algorithm's were in my academic syllabus.
 
 > <b>Graph Bicoloring:</b> Vertex coloring is the most common graph coloring problem. The problem is, given 2 colors, if there exist a way of coloring the vertices of a graph such that no two adjacent vertices are colored using same color you should print "BICOLORABLE", "NOT BICOLORABLE" otherwise.
