@@ -7,10 +7,6 @@ defmodule Challenge do
     even_or_odd(10)
   end
   def even_or_odd(number) do
-    if rem(number, 2) == 0 do
-    	"Even"
-    else
-    	"Odd"
-    end
+    if rem(number, 2) == 0, do: "Even", else: "Odd" 
   end
 end
