@@ -1,0 +1,10 @@
+GET -> get data
+PUT -> update data
+POST -> insert data
+DELETE -> delete data
+
+GET /api/customers -> get all the data in customers
+GET /api/customers/1 -> get data where id is 1
+PUT /api/customers/1 -> update data where id is 1
+POST /api/customers -> insert data into customers
+DELETE /api/customers/1 -> delete data where id is 1
