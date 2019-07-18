@@ -40,4 +40,3 @@ int main(){
     else cout << "Solution Doesn't Exist" << endl;
     return 0;
 }
-

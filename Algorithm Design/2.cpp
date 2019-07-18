@@ -17,7 +17,6 @@ void fMaxMin(int *a, int i, int j, int &m ,int &n){
 }
 int main(){
     int n;
-    cout << "How many elements you want to insert? : ";
     cin >> n;
     int arr[n];
     for(int i = 0; i < n; i++) cin >> arr[i];
@@ -26,4 +25,3 @@ int main(){
     cout << "Max element of the array is: " << mx << endl << "Min element of the array is: " << mn << endl;
     return 0;
 }
-
