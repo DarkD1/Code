@@ -1,3 +1,5 @@
+; TAKE A STRING FROM USER AND VALUE OF N AND PRINT IT ON SCREEN N TIMES..
+
 .model small
 .stack 100h
 .data                              
