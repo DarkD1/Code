@@ -53,6 +53,13 @@ void deleteNode(struct trieNode *root, string s){
         assert(false);
     }
 }
+void del(node* cur){
+    for (int i = 0; i < 26; i++)
+        if (cur->trieNodes[i])
+            del(cur->trieNodes[i]);
+
+    delete (cur);
+}
 void updateNode(struct trieNode* root, string oldString, string newString){
     deleteNode(root, oldString);
     insertNode(root, newString);
