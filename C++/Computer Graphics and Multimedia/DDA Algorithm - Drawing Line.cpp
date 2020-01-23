@@ -35,7 +35,7 @@ void DDAalgorithm(int x1, int y1, int x2, int y2){
     yinc = round(dy * 1.0 / moves);
     x = x1, y = y1;
     for(int i = 0; i < moves; i++){
-        putpixel(x, y, 9);
+        putpixel(x, y, WHITE);
         x += xinc;
         y += yinc;
     }
