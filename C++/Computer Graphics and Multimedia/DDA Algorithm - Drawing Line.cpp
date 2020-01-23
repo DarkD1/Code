@@ -7,7 +7,7 @@ void DDAalgorithm(int x1, int y1, int x2, int y2);
 int main(){
     /**INITIALIZE GRAPHICS**/
     int graphDriver = DETECT, graphMode;
-    initgraph(&graphDriver, &graphMode, "c:\\tc\\bgi");
+    initgraph(&graphDriver, &graphMode, "c:\\bgi");
     /****/
 
     int x1, x2, y1, y2;
