@@ -4,6 +4,16 @@
 #include <iostream>
 using namespace std;
 void DDAalgorithm(int x1, int y1, int x2, int y2);
+/**
+    Algorithm:
+    Step 1: set x := x1, y := y1, dx := abs(x1 - x2), dy := abs(y1 - y2);
+    Step 2: set moves := max(dx, dy), xinc := round(dx / moves), yinc := round(dy / moves);
+    Step 3: for i:= 0 to moves do {
+        putpixel(x, y, WHITE);
+        x := x + xinc;
+        y := y + yinc;
+    }
+**/
 int main(){
     /**INITIALIZE GRAPHICS**/
     int graphDriver = DETECT, graphMode;
