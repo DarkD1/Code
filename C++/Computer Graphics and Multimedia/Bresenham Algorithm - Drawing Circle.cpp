@@ -6,7 +6,7 @@ void drawCircle(int xc, int yc, int x, int y);
 int main(){
     int gd = DETECT, gm, xcenter, ycenter, radius;
     initgraph(&gd, &gm, "");
-    cout << "Enter the center co-ordinates:(x, y) ";
+    cout << "Enter the center co-ordinates (x, y): ";
     cin >> xcenter >> ycenter;
     cout << "Enter the radius: ";
     cin >> radius;
