@@ -1,3 +1,8 @@
+/* Copyright (C) Sazzad Shopno - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Sazzad Shopno <sazzadshopno6@gmail.com>, August 1999
+ */
 #include <graphics.h>
 #include <dos.h>
 #include <cmath>
