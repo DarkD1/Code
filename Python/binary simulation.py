@@ -28,5 +28,5 @@ def binary_simulation(s, q):
             res.append(val)
     return res
 
-
 print(binary_simulation('0000000000', [['I', 1, 10], ['Q', 2]]))
+
