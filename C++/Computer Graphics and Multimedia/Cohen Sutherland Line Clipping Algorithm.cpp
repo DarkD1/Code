@@ -60,24 +60,60 @@ int visibilityCheck(coordinate a, coordinate b){
     }
 }
 
+coordinate clipIt(coordinate a, coordinate b){
+    int x, y;
+    float m;
+    coordinate newCord;
+    if(a.code[2] || a.code[3]){
+        x = a.code[2]? WX2 : WX1;
+        m = abs(a.y - b.y) * 1.0 / abs(a.x - b.x);
+        newCord.y = a.y + (m * (x - a.x));
+        newCord.x = x;
+        for(int i = 0; i < 4; i++){
+            newCord.code[i] = a.code[i];
+        }
+        if(newCord.y >= WY1 && newCord.y <= WY2){
+            return newCord;
+        }
+    }
+    if(a.code[0] || a.code[1]){
+        y = a.code[0]? WY1 : WY2;
+        m = abs(a.y - b.y) * 1.0 / abs(a.x - b.x);
+        newCord.x = a.x + ((y - a.y) * 1.0 / m);
+        newCord.y = y;
+        for(int i = 0; i < 4; i++){
+            newCord.code[i] = a.code[i];
+        }
+        return newCord;
+    }
+    return a;
+}
+
 int main(){
     int gd = DETECT, gm;
     initgraph(&gd, &gm, "");
-    drawWindow();
     while(1){
+        drawWindow();
         coordinate a, b;
         cin >> a.x >> a.y >> b.x >> b.y;
         a.setCode();
         b.setCode();
-        line(a.x, a.y, b.x, b.y);
         int r = visibilityCheck(a, b);
+        line(a.x, a.y, b.x, b.y);
         if(r == 0){
             printf("Visible!\n");
         }else if(r == -1){
             printf("Not visible.\n");
         }else if(r == 1){
+            coordinate newA = clipIt(a, b), newB = clipIt(b, a);
+            delay(1000);
+            cleardevice();
+            drawWindow();
+            line(newA.x, newA.y, newB.x, newB.y);
             printf("Clipping candidate.\n");
         }
+        delay(2000);
+        cleardevice();
     }
     getch();
     closegraph();
